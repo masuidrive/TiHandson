@@ -1,6 +1,18 @@
-# その1
+# Hello World
 
-app.js の label1を変更 本書 46p
+Ti本 34p〜
+
+# その1 空プロジェクトを作り実行
+
+Titanium Studioのメニューで、File -> New -> Titanium Mobile Project
+
+- Project name: 適当な英語名
+- App Id: com.example.test01 など
+
+
+# その2 見た目を変更
+
+app.js の label1を変更 
 
     var label1 = Titanium.UI.createLabel({
     	backgroundColor: "#fcc",
@@ -14,7 +26,7 @@ app.js の label1を変更 本書 46p
     	height: "50dp"
     });
 
-# その2
+# その3 色々変えてみる
 
 上記の色や文字などを適当に変更してみる
 
@@ -26,13 +38,13 @@ createLabelをcreateButtonや、createTextFieldに変更してみる。
 - <http://developer.appcelerator.com/apidoc/mobile/latest>
 - <http://tidocs.com>
 
-# その3 ボタンとイベント
+# その4 ボタンとイベント
 
 ボタンを加え、クリックすると「クリックされました」とダイアログを出す
 
 test01a-app.js
 
-# その4 時計をタブ2に表示
+# その5 時計をタブ2に表示
 
 下記のコードを適当な所へ挿入してください。
 
@@ -46,7 +58,7 @@ test01a-app.js
 test01b-app.js
 
 
-# その5 3つめのタブを追加
+# その6 3つめのタブを追加
 
 まずは、空のタブを一つ追加。タイトルは"Web"
 
@@ -56,7 +68,7 @@ test01b-app.js
     tabGroup.addTab(tab3);  
 
 
-# その6 3つめのタブにWebViewを追加
+# その7 3つめのタブにWebViewを追加
 
 win3に下記の様なオブジェクトを追加
 
@@ -65,3 +77,14 @@ win3に下記の様なオブジェクトを追加
     });
 
 test01c-app.js
+
+
+# その8 ディレクトリ解説
+
+プロジェクトのディレクトリ解説
+
+
+# その9 tiapp.xml
+
+アプリの設定を行う
+
