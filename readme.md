@@ -32,6 +32,8 @@ app.js の label1を変更
     	height: "50dp"
     });
 
+![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/110618-0015.png)
+
 ## その3 色々変えてみる
 
 上記の色や文字などを適当に変更してみる
