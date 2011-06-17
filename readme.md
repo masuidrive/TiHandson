@@ -9,6 +9,8 @@ Titanium Studioのメニューで、File -> New -> Titanium Mobile Project
 - Project name: 適当な英語名
 - App Id: com.example.test01 など
 
+![create project](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/110617-0005.png)
+
 
 ## その2 見た目を変更
 
