@@ -2,7 +2,7 @@
 
 Ti本 34p〜
 
-# その1 空プロジェクトを作り実行
+## その1 空プロジェクトを作り実行
 
 Titanium Studioのメニューで、File -> New -> Titanium Mobile Project
 
@@ -10,7 +10,7 @@ Titanium Studioのメニューで、File -> New -> Titanium Mobile Project
 - App Id: com.example.test01 など
 
 
-# その2 見た目を変更
+## その2 見た目を変更
 
 app.js の label1を変更 
 
@@ -26,7 +26,7 @@ app.js の label1を変更
     	height: "50dp"
     });
 
-# その3 色々変えてみる
+## その3 色々変えてみる
 
 上記の色や文字などを適当に変更してみる
 
@@ -38,13 +38,13 @@ createLabelをcreateButtonや、createTextFieldに変更してみる。
 - <http://developer.appcelerator.com/apidoc/mobile/latest>
 - <http://tidocs.com>
 
-# その4 ボタンとイベント
+## その4 ボタンとイベント
 
 ボタンを加え、クリックすると「クリックされました」とダイアログを出す
 
 test01a-app.js
 
-# その5 時計をタブ2に表示
+## その5 時計をタブ2に表示
 
 下記のコードを適当な所へ挿入してください。
 
@@ -58,7 +58,7 @@ test01a-app.js
 test01b-app.js
 
 
-# その6 3つめのタブを追加
+## その6 3つめのタブを追加
 
 まずは、空のタブを一つ追加。タイトルは"Web"
 
@@ -68,7 +68,7 @@ test01b-app.js
     tabGroup.addTab(tab3);  
 
 
-# その7 3つめのタブにWebViewを追加
+## その7 3つめのタブにWebViewを追加
 
 win3に下記の様なオブジェクトを追加
 
@@ -79,12 +79,118 @@ win3に下記の様なオブジェクトを追加
 test01c-app.js
 
 
-# その8 ディレクトリ解説
+## その8 ディレクトリ解説
 
 プロジェクトのディレクトリ解説
 
 
-# その9 tiapp.xml
+## その9 tiapp.xml
 
 アプリの設定を行う
 
+
+# 読み込み専用Twitter client
+
+Ti本 65p〜
+
+## その1 TiTweets プロジェクトを作る
+
+## その2 先にTableView解説
+
+Ti本 76p〜
+
+app.jsのvar label1 〜 win1.add(label1)を削除
+
+    var tableView = Titanium.UI.createTableView({
+    	data: [
+    		{title: "1行目"},
+    		{title: "2行目"}
+    	]
+    });
+    
+    win1.add(tableView);
+
+
+## その3 行をクリック
+
+下記の行を適当な所に追加
+
+    tableView.addEventListener('click', function (ev) {
+    	Ti.API.info(ev.rowData);
+    	alert(ev.rowData.title);
+    });
+
+
+## その4 Twitterの情報を取得
+
+下記の行を適当な所に追加
+
+    var http = Titanium.Network.createHTTPClient();
+    http.open("GET", "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=appcelerator_ja");
+    http.onload = function() {
+    	var json = JSON.parse(http.responseText);
+    	json.forEach(function(tweet) {
+    		Titanium.API.info(tweet.text);
+    	});
+    };
+    http.send();
+
+## その5 TableViewにTweetsを表示する
+
+    var http = Titanium.Network.createHTTPClient();
+    http.open("GET", "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=appcelerator_ja");
+    http.onload = function() {
+    	var json = JSON.parse(http.responseText);
+    	tableView.data = json.map(function(tweet) {
+    	    return({title: tweet.text});
+    	});
+    };
+    http.send();
+
+test02b-app.js
+
+## その6 見た目を整形
+
+    http.onload = function() {
+    	var json = JSON.parse(http.responseText);
+    	tableView.data = json.map(function(tweet) {
+    		var row = Titanium.UI.createTableViewRow({
+    			className: "tweet",
+    			height: 'auto'
+    		});
+    		
+    		row.add(Titanium.UI.createLabel({
+    			text: tweet.user.screen_name,
+    			top: 8,
+    			left: 64,
+    			height: 16
+    		}));
+    		
+    		row.add(Titanium.UI.createLabel({
+    			text: tweet.text,
+    			top: 32,
+    			left: 64,
+    			right: 8,
+    			height: 'auto',
+    			bottom: 8
+    		}));
+    		
+    		row.add(Titanium.UI.createImageView({
+    			url: tweet.user.profile_image_url,
+    			top: 8,
+    			left: 8,
+    			width: 48,
+    			height: 48
+    		}));
+    		
+    	    return(row);
+    	});
+    };
+    
+test02c-app.js
+
+
+## その7 さらに調整
+
+- 文字の色を黒にしよう
+- ユーザ名をboldにしよう
