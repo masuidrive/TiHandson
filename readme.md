@@ -9,11 +9,11 @@ Titanium Studioのメニューで、File -> New -> Titanium Mobile Project
 - Project name: 適当な英語名
 - App Id: com.example.test01 など
 
-![create project](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110617-0005.png)
+![create project](https://github.com/masuidrive/TiHandson/raw/master/images/110617-0005.png)
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110617-0007.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110617-0007.png)
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0002.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0002.png)
 
 
 ## その2 見た目を変更
@@ -32,7 +32,7 @@ app.js の label1を変更
     	height: "50dp"
     });
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0015.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0015.png)
 
 ## その3 色々変えてみる
 
@@ -52,9 +52,9 @@ createLabelをcreateButtonや、createTextFieldに変更してみる。
 
 test01a-app.js
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0004.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0004.png)
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0005.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0005.png)
 
 
 ## その5 時計をタブ2に表示
@@ -70,7 +70,7 @@ test01a-app.js
 
 test01b-app.js
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0006.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0006.png)
 
 
 ## その6 3つめのタブを追加
@@ -82,7 +82,7 @@ test01b-app.js
     〜〜〜
     tabGroup.addTab(tab3);  
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0008.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0008.png)
 
 
 ## その7 3つめのタブにWebViewを追加
@@ -95,7 +95,7 @@ win3に下記の様なオブジェクトを追加
 
 test01c-app.js
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0009.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0009.png)
 
 
 ## その8 ディレクトリ解説
@@ -129,7 +129,7 @@ app.jsのvar label1 〜 win1.add(label1)を削除
     
     win1.add(tableView);
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0010.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0010.png)
 
 ## その3 行をクリック
 
@@ -140,7 +140,7 @@ app.jsのvar label1 〜 win1.add(label1)を削除
     	alert(ev.rowData.title);
     });
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0011.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0011.png)
 
 ## その4 Twitterの情報を取得
 
@@ -174,7 +174,7 @@ app.jsのvar label1 〜 win1.add(label1)を削除
 
 test02b-app.js
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0013.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0013.png)
 
 ## その6 見た目を整形
 
@@ -216,7 +216,7 @@ test02b-app.js
     
 test02c-app.js
 
-![run](https://github.com/masuidrive/TiWorkshopNagoya/raw/master/images/110618-0014.png)
+![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0014.png)
 
 
 ## その7 さらに調整
