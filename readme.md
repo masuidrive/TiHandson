@@ -157,7 +157,7 @@ app.jsのvar label1 〜 win1.add(label1)を削除
     http.send();
 
 
-会場では、Twitter APIの制約のため、URLは"http://masuidrive.jp/tmp/appc.json"を使用すること。
+会場では、Twitter APIの制約のため、URLは http://masuidrive.jp/tmp/appc.json を使用すること。
 
 
 ## その5 TableViewにTweetsを表示する
