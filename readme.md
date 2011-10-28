@@ -2,6 +2,7 @@
 
 Ti本 34p〜
 
+
 ## その1 空プロジェクトを作り実行
 
 Titanium Studioのメニューで、File -> New -> Titanium Mobile Project
@@ -34,17 +35,25 @@ app.js の label1を変更
 
 ![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0015.png)
 
+
 ## その3 色々変えてみる
 
 上記の色や文字などを適当に変更してみる
 
 createLabelをcreateButtonや、createTextFieldに変更してみる。
 
+- Titanium.UI.createLabel({ text: ….
+- Titanium.UI.createButton({ title: ….
+- Titanium.UI.createTextArea({ value: ….
+- Titanium.UI.createTextField({ value: ….
+- Titanium.UI.createSlider({ min: 0, max: 100, value: 50 ….
+
 パラメータは、下記の物を参考にしてください。
 
 - <http://code.google.com/p/titanium-mobile-doc-ja/>
 - <http://developer.appcelerator.com/apidoc/mobile/latest>
 - <http://tidocs.com>
+
 
 ## その4 ボタンとイベント
 
@@ -112,7 +121,9 @@ test01c-app.js
 
 Ti本 65p〜
 
+
 ## その1 TiTweets プロジェクトを作る
+
 
 ## その2 先にTableView解説
 
@@ -131,18 +142,10 @@ app.jsのvar label1 〜 win1.add(label1)を削除
 
 ![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0010.png)
 
-## その3 行をクリック
-
-下記の行を適当な所に追加
-
-    tableView.addEventListener('click', function (ev) {
-    	Ti.API.info(ev.rowData);
-    	alert(ev.rowData.title);
-    });
-
 ![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0011.png)
 
-## その4 Twitterの情報を取得
+
+## その3 Twitterの情報を取得
 
 下記の行を適当な所に追加
 
@@ -160,7 +163,7 @@ app.jsのvar label1 〜 win1.add(label1)を削除
 会場では、Twitter APIの制約のため、URLは http://masuidrive.jp/tmp/appc.json を使用すること。
 
 
-## その5 TableViewにTweetsを表示する
+## その4 TableViewにTweetsを表示する
 
     var http = Titanium.Network.createHTTPClient();
     http.open("GET", "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=appcelerator_ja");
@@ -175,6 +178,17 @@ app.jsのvar label1 〜 win1.add(label1)を削除
 test02b-app.js
 
 ![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0013.png)
+
+
+## その5 行をクリック
+
+下記の行を適当な所に追加
+
+    tableView.addEventListener('click', function (ev) {
+    	Ti.API.info(ev.rowData);
+    	alert(ev.rowData.title);
+    });
+
 
 ## その6 見た目を整形
 

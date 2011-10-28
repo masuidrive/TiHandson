@@ -45,8 +45,6 @@ view.add(button1);
 
 win1.add(view);
 
-win1.add(view);
-
 button1.addEventListener('click', function() {
 	Titanium.UI.createAlertDialog({
 		title: "タイトル",
