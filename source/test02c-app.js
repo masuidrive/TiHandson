@@ -54,7 +54,7 @@ http.onload = function() {
 		}));
 		
 		row.add(Titanium.UI.createImageView({
-			url: tweet.user.profile_image_url,
+			image: tweet.user.profile_image_url,
 			top: 8,
 			left: 8,
 			width: 48,
