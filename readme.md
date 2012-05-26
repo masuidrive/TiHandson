@@ -142,8 +142,6 @@ app.jsのvar label1 〜 win1.add(label1)を削除
 
 ![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0010.png)
 
-![run](https://github.com/masuidrive/TiHandson/raw/master/images/110618-0011.png)
-
 
 ## その3 Twitterの情報を取得
 
