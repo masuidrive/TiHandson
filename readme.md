@@ -148,7 +148,7 @@ app.jsのvar label1 〜 win1.add(label1)を削除
 下記の行を適当な所に追加
 
     var http = Titanium.Network.createHTTPClient();
-    http.open("GET", "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=appcelerator_ja");
+    http.open("GET", "http://masuidrive.jp/tmp/appc.json");
     http.onload = function() {
     	var json = JSON.parse(http.responseText);
     	json.forEach(function(tweet) {
@@ -159,6 +159,8 @@ app.jsのvar label1 〜 win1.add(label1)を削除
 
 
 会場では、Twitter APIの制約のため、URLは http://masuidrive.jp/tmp/appc.json を使用すること。
+
+本来は、 http://api.twitter.com/1/statuses/user_timeline.json?screen_name=appcelerator_ja などを使う。
 
 
 ## その4 TableViewにTweetsを表示する
